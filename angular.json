@@ -175,6 +175,46 @@
           }
         }
       }
+    },
+    "ngx-num-to-words": {
+      "projectType": "library",
+      "root": "projects/ngx-num-to-words",
+      "sourceRoot": "projects/ngx-num-to-words/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-num-to-words/tsconfig.lib.json",
+            "project": "projects/ngx-num-to-words/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-num-to-words/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-num-to-words/src/test.ts",
+            "tsConfig": "projects/ngx-num-to-words/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-num-to-words/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-num-to-words/tsconfig.lib.json",
+              "projects/ngx-num-to-words/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-num-to-word-demo",
