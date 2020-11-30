@@ -20,7 +20,7 @@ Big thanks to [@forzagreen](https://github.com/forzagreen) :heart
 
 <p align="center">
   <img alt="ngx-num-to-words demonstration" style="text-align: center;"
-   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/ex1.png">
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/e1.gif">
 </p>
 
 
@@ -62,19 +62,12 @@ View all the directives and components in action at [https://anthonynahas.github
 
 ##  [Installation](https://anthonynahas.github.io/ngx-num-to-words/getting-started)
 
-## 1. Install via *ng add*. (Recommended)
 
-
-Now add the library via the `angular schematics`
-```shell
-ng add ngx-num-to-words
-```
-
-## 2. Install via *npm*. (Alternative) 
+##  Install via *npm*. (Alternative) 
 
 Now install `ngx-num-to-words` via:
 ```shell
-npm install --save ngx-num-to-words
+npm install --save n2words ngx-num-to-words 
 ```
 
 
@@ -103,10 +96,90 @@ Other modules in your application like for lazy loading import ` NgxNumToWordsMo
 ## API
 
 
+<a name="usage"/>
+
+### Using the service
+
+```html
+<h1><b>{{numberInWords}}</b></h1>
+```
+
 ```typescript
+import { NgxNumToWordsService, SUPPORTED_LANGUAGE } from 'ngx-num-to-words';
+
+
+numberInWords!: string;
+lang!: SUPPORTED_LANGUAGE = 'en';
+value = 123;
+
+ constructor(private ngxNumToWordsService: NgxNumToWordsService) {
+  }
+
+
+ngOnInit(): void {
+
+    this.numberInWords = this.ngxNumToWordsService.inWords(value, this.lang);
+
+ }
+
+
 
 
 ```
+
+
+### Using the pipe `inWords`
+
+
+```html
+
+<span>{{ 123 | inWords }}</span> // default en language
+<span>{{ 123 | inWords:'de' }}</span> // custom language --> german in this case
+
+```
+
+#### hier are some example
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/en.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/ar.png">
+</p>
+
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/de.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/es.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/fr.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/ko.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/ukr.png">
+</p>
+
+<p align="center">
+  <img alt="ngx-num-to-words demonstration" style="text-align: center;"
+   src="https://raw.githubusercontent.com/anthonynahas/ngx-num-to-words/HEAD/assets/tr.png">
+</p>
 
 ## Supported Languages
 
@@ -131,55 +204,6 @@ Other modules in your application like for lazy loading import ` NgxNumToWordsMo
 - `sr` (Serbian)
 - `tr` (Turkish)
 - `uk` (Ukrainian)
-
-
-<a name="usage"/>
-
-## [Usage](https://anthonynahas.github.io/ngx-num-to-words)
-
-
-#### via service `NgxMailtoService`
-
-
-```html
-<button class="try-me" mat-raised-button color="primary" (click)="open()">Try Me!</button>
-```
-
-```typescript
-
-import { Mailto, NgxMailtoService } from 'ngx-num-to-words';
-
- emails: string[] = ['your_email@domain.de'];
-  cc: string[] = [];
-  bcc: string[] = [];
-  subject!: string;
-  body!: string;
-
-  mailto: Mailto = {
-    receiver: this.emails,
-    cc: this.cc,
-    bcc: this.bcc,
-    subject: undefined,
-    body: undefined
-  };
-
- constructor(private mailtoService: NgxMailtoService) {
-  }
-
-
-open(): void {
-    this.mailtoService.open(this.mailto);
-  }
-
-```
-
-
-#### via pipe `mailto`
-
-```html
-<a class="try-me" mat-raised-button color="accent" [href]="this.mailto | mailto">Try me!</a>
-```
-
 
 
 <a name="run-demo-app-locally"/>
