@@ -108,6 +108,30 @@ Other modules in your application like for lazy loading import ` NgxNumToWordsMo
 
 ```
 
+## Supported Languages
+
+- `en` (English, default)
+- `ar` (Arabic)
+- `cz` (Czech)
+- `dk` (Danish)
+- `de` (German)
+- `es` (Spanish)
+- `fr` (French)
+- `fa` (Farsi)
+- `he` (Hebrew)
+- `it` (Italian)
+- `ko` (Korean)
+- `lt` (Lithuanian)
+- `lv` (Latvian)
+- `nl` (Dutch)
+- `no` (Norwegian)
+- `pl` (Polish)
+- `pt` (Portuguese)
+- `ru` (Russian)
+- `sr` (Serbian)
+- `tr` (Turkish)
+- `uk` (Ukrainian)
+
 
 <a name="usage"/>
 
