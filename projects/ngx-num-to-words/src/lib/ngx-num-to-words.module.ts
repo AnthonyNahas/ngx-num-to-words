@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { NgxNumToWordsComponent } from './ngx-num-to-words.component';
-
+import { InWordsPipe } from './in-words.pipe';
 
 
 @NgModule({
-  declarations: [NgxNumToWordsComponent],
-  imports: [
-  ],
-  exports: [NgxNumToWordsComponent]
+  declarations: [InWordsPipe],
+  imports: [],
+  exports: [InWordsPipe]
 })
-export class NgxNumToWordsModule { }
+export class NgxNumToWordsModule {
+}

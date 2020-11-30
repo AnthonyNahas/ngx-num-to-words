@@ -3,5 +3,6 @@
  */
 
 export * from './lib/ngx-num-to-words.service';
-export * from './lib/ngx-num-to-words.component';
+export * from './lib/in-words.pipe';
 export * from './lib/ngx-num-to-words.module';
+export * from './lib/i18n';
