@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 // @ts-ignore
 import n2words from 'n2words';
-import { SUPPORTED_LANGUAGE } from './i18n';
+import { SUPPORTED_LAUAGE } from './i18n';
 
 @Pipe({
   name: 'inWords'
