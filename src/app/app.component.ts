@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { NgxNumToWordsService, SUPPORTED_LANGUAGE } from 'ngx-num-to-words';
@@ -14,7 +14,7 @@ import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 export class AppComponent implements OnInit {
 
   title = 'ngx-num-to-word-demo';
-  fc = new FormControl(123);
+  fc = new UntypedFormControl(123);
   numberInWords!: string;
   lang!: SUPPORTED_LANGUAGE;
   initialValue = 123;

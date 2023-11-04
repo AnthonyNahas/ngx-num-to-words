@@ -282,7 +282,6 @@
       }
     }
   },
-  "defaultProject": "ngx-num-to-word-demo",
   "cli": {
     "analytics": "f105e0d3-13f3-485b-9e85-d9ea3e8389e5"
   }
