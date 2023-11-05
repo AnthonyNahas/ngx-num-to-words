@@ -1,6 +1,6 @@
 {
   "name": "ngx-num-to-words",
-  "version": "1.0.0",
+  "version": "15.0.0",
   "description": "Material password strength meter to indicate how secure is the provided password",
   "homepage": "https://anthonynahas.github.io/ngx-num-to-words/",
   "author": {
@@ -47,7 +47,7 @@
     "url": "https://github.com/anthonynahas/ngx-num-to-words/issues"
   },
   "scripts": {
-    "build": "../../node_modules/.bin/ng build ngx-num-to-words --prod",
+    "build": "../../node_modules/.bin/ng build ngx-num-to-words --configuration=production",
     "build:schematics": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
     "clean": "rm -rf ../../dist",
     "lint": "../../node_modules/.bin/ng lint ngx-num-to-words",
